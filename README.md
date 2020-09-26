@@ -30,83 +30,10 @@ tar -xzvf ${line}
 done
 ~~~
 
-## Training
+## Training and evaluations
 
-![](./Image/antibiostic.png)
-We have provided the trained models, including the pre-train model, under Data/log/train_log. To train the models, please refer to the run.sh under each task directory.  
-
-## Evaluation
-
-The models can be evaluated by:
+We have provided the trained models, including the pre-train model, under tasks. You can train your own model by:
 ~~~
-cd TaskDir
-python main.py -t 0
+python main.py -c PATH_TO_CONFIG
 ~~~
-
-## Results
-The sampled molecules for each task have been provided under each directory.
-
-### Property optimization with unlimited property evaluation queries
-To reproduce the results of optimizing penalized logP and optimizing QED scores, run
-~~~
-# reproduce the results of optimizing penalized logP
-cd Optimize_logp 
-python main.py -t 0
-
-# reproduce the results of optimizing QED
-cd Optimize_qed
-python main.py -t 0
-~~~
-
-![](./Image/optunlimited.png)
-
-### Property range targeting
-
-~~~
-# reproduce targeting -2.5<= penalized logP <=-2.0
-cd Target_225_Logp
-python main.py -t 0
-
-# reproduce targeting 5.0<=penalized logP <=5.5
-cd Target_525_Logp
-python main.py -t 0
-
-# reproduce targeting 150<= MW <= 200
-cd Target_175_MW
-python main.py -t 0
-
-# reproduce targeting 500<= MW <= 550
-cd Target_525_MW 
-python main.py -t 0
-~~~
-
-![](./Image/propertytarget.png)
-
-### Constrained property optimization
-
-~~~
-cd Constraint_Opt
-bash run.sh        #this may take a long time
-~~~
-
-![](./Image/cons.png)
-
-### Property optimization with limited property evaluation queries
-
-~~~
-cd Optimize_logp_limited_o
-bash run.sh
-python merge.py
-~~~
-
-![](./Image/optlimited.png)
-
-### Antibiotic discovery
-
-~~~
-cd Antibiotic
-python main.py -t 0
-~~~
-
-![](./Image/antibiotic.png)
-
+Please refer to *config_example.py* for the format of the config file. Under tasks, we have provided the *config.py* and results for the statistics presented in our paper.
