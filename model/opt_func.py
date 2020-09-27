@@ -54,7 +54,7 @@ class wrapper(object):
                 self.smiledict[smile]=1.0
         self.n+=1
         if self.n%6400==0:
-            logger.info(self.smilelist)
+            logger.info("The best molecules:{}".format(self.smilelist))
         return score, score
 def get_qurt(data, t=0.6):
     data=sorted(data)

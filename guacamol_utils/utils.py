@@ -74,7 +74,7 @@ class benchmark_funcwrapper(object):
 
         if self.n%3200==0:
             print(self.mean, self.var)
-            logger.info(self.smilelist)
+            logger.info("The best molecules: {}".format(self.smilelist))
 
         if score.score>self.molecule[1]:
             self.molecule=[smile, score.score]
