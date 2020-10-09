@@ -21,7 +21,7 @@ conda install -c conda-forge rdkit
 
 Install related packages:
 ~~~
-pip install -r requirement.txt
+pip install -r requirements.txt
 cd MyLib
 python setup.py install
 ~~~
