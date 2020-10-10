@@ -18,7 +18,7 @@ config={
         #"reward_target":1.0,
         #"avg_moving_rate":0.0,
 
-        "pretrain_path":"tasks/Pretrain_zinc_3l/model/pretrain.model.ckpt",
+        "pretrain_path":"tasks/Pretrain_zinc/model/pretrain.model.ckpt",
         "crit_prestep":100,
         "train_epoch":100,
         "pretrain_epoch":20,

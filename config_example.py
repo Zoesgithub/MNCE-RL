@@ -15,7 +15,7 @@ config={
         "reward_fp":-1.0, # the reward value when the generated molecule is incompleted.
         "reward_avg":0.0, # the average value used to centralize the reward values
 
-        "pretrain_path":"tasks/Pretrain_guacamol_3l/model/pretrain.model.ckpt", # the path to the pre-trained model
+        "pretrain_path":"tasks/Pretrain_guacamol/model/pretrain.model.ckpt", # the path to the pre-trained model
         "crit_prestep":100, # the number of iterations to pre-train the critic
         "train_epoch":100, # the number of epochs to train the model
         "pretrain_epoch":100, # when run_mode=1, the number of epochs to pre-train the model
