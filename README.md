@@ -41,4 +41,8 @@ You can run training and evaluations by:
 ~~~
 python main.py -c PATH_TO_CONFIG
 ~~~
+For example:
+~~~
+python main.py -c tasks.Optimize_logp_limited.config_seed1
+~~~
 Please refer to *config_example.py* for the format of the config file. In the tasks directory, we have provided the pretrained model, and the *config.py* and results for all the tasks presented in our paper.
