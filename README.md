@@ -17,6 +17,7 @@ source activate MNCERL
 Install rdkit:
 ~~~
 conda install -c conda-forge rdkit
+conda install Cython
 ~~~
 
 Install related packages:
