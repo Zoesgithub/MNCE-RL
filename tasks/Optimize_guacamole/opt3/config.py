@@ -20,7 +20,7 @@ config={
         "reward_fp":-1.0,
         "reward_avg":0.0,
 
-        "pretrain_path":"tasks/Pretrain_guacamol_3l/model/pretrain.model.ckpt",
+        "pretrain_path":"tasks/Pretrain_guacamol/model/pretrain.model.ckpt",
         #"pretrain_path":"tasks/Optimize_guacamole/opt9/pretrain.model.ckpt",
         "crit_prestep":100,
         "train_epoch":100,
