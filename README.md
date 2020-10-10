@@ -14,7 +14,7 @@ conda create -n MNCERL python=3.6
 source activate MNCERL
 ~~~
 
-Install rdkit:
+Install rdkit and Cython:
 ~~~
 conda install -c conda-forge rdkit
 conda install Cython
