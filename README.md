@@ -45,7 +45,7 @@ For example:
 ~~~
 python main.py -c tasks.Optimize_logp_limited.config_seed1
 ~~~
-Please refer to *config_example.py* for the format of the config file. In the tasks directory, we have provided the pretrained model, and the *config.py* and results for all the tasks presented in our paper.
+Please refer to *config_example.py* for the format of the config file. In the "tasks" directory, we have provided the pretrained model, and the *config.py* and results for all the tasks presented in our paper.
 
 
 ## Costom data
@@ -57,4 +57,4 @@ For example:
 ~~~
 python mkdata.py -c tasks.Makedata_zinc.config
 ~~~
-Please refer to tasks/Makedata_zinc/config.py for the format of the config file. Then the parsed custom data can be used to train models by specifying the "data_path" in the training config file.
+Please refer to *tasks/Makedata_zinc/config.py* for the format of the config file. Then the parsed custom data can be used to train models by specifying the "data_path" in the training config file.
