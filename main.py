@@ -39,7 +39,10 @@ def check_path(path, name=None):
                     return os.path.join(path, name)
         else:
             Files=[_ for _ in List if  not "best" in _ and not "now" in _ and "model.ckpt" in _ and not "pretrain" in _]
-            return os.path.join(path, sorted(Files, key=lambda x:int(x.split("-")[-1]))[-1])
+            if len(Files)>0:
+                return os.path.join(path, sorted(Files, key=lambda x:int(x.split("-")[-1]))[-1])
+            else:
+                return None
     return None
 
 def eval_func(gen, score_func, samplenum, batchsize, eval_mode=False, keep_fake=False):
