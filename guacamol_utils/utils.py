@@ -1,4 +1,5 @@
 from loguru import logger
+import guacamol
 from guacamol.benchmark_suites import goal_directed_benchmark_suite
 from collections import OrderedDict
 import json
@@ -6,6 +7,7 @@ from rdkit import Chem
 import time
 import numpy as np
 import os
+from guacamol.utils.data import get_time_string
 
 
 
