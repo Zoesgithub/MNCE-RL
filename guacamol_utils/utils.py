@@ -11,6 +11,7 @@ from guacamol.utils.data import get_time_string
 
 
 
+
 def ana_generated_molecules_with_benchmark(Molecules, benchmark):
     logger.info("Running evaluations on {}".format(benchmark.name) )
     results=benchmark.ana_molecules(Molecules, time.time())
