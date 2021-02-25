@@ -1134,7 +1134,6 @@ def mol2nodegraph(mol):
             special_bonds.append([bond_info[0], bond_info[1]])
 
     sub= max(nx.connected_components(G))
-    G=G.subgraph(sub).copy()
 
     _, _, rev_diction, order, s = nodegraph2molwithnodeidx(G, False, None, 0)
     cmol=Chem.MolFromSmiles(s)
@@ -1190,6 +1189,7 @@ def mol2nodegraph(mol):
                     G.nodes[n]["name"]=G.nodes[n]["name"].replace("CCW", "CW")
                 else:
                     G.nodes[n]["name"] = G.nodes[n]["name"].replace("CW", "CCW")
+    G=G.subgraph(sub).copy()
     return G
 
 def edge_match(x,y):
